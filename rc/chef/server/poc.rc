@@ -1,0 +1,4 @@
+#!/bin/bash
+
+. ${RC_DIR}/chef/server.rc
+ 

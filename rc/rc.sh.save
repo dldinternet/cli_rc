@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ -z "$EC2_HOME" ] ;then
+
+	rc=$(dirname $0)/init.rc
+	if [ -L $0 ] ; then
+		#ls -l $0
+		rc=$(ls -al $0 | awk '{ print $11 }')
+	fi
+	if [ -z "`echo $rc | egrep -e '^\.'`" ] ; then
+		rc=$(dirname $rc)/init.rc
+	else
+		rc=$(dirname $0)/$rc
+		rc=$(dirname $rc)/init.rc
+	fi
+	if [ ! -f $rc ] ; then
+		rc=$(dirname $rc)/../rc/init.rc
+	fi
+
+	#$(${RC_DIR}/rc.peek.sh | egrep -e '(EC2|AWS|RC_|KNIFE_)' | egrep -v -e '^(_=)' | awk '{ print "export "$1" "$2 }')
+	#typeset -x $(set | egrep -e '(EC2|AWS|RC_|KNIFE_|PATH|GEM_)' | egrep -v -e '^(_=|\s)' | cut -d = -f 1)
+	#echo $rc
+	. $rc
+
+	#export -p
+
+	. ${RC_DIR}/rc.peek.sh
+
+	echo "${fg_green}'exit' when done.${reset}"
+	#set -x 
+	export PSRC="${fg_black}${bg_cyan}${RC_ACCT}${reset}--"
+	RC_PROFILE=${RC_DIR}/rvm.profile.rc
+	. ${RC_DIR}/subshell.rc
+	#set +x
+
+else
+	echo "${fg_red}Already loaded.${reset}"
+fi	

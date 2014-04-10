@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ -z "$RC_DIR" ] ; then
+    # TODO: Set to your RC_DIR
+	export RC_DIR={PATH}
+	export RC_CLOUD=aws
+	# TODO: Set your default account
+	export RC_ACCT={YOUR_RC_ACCT}
+	# TODO: Set to your user
+	export RC_USER={YOUR_RC_USER}
+	export RC_KEYP={YOUR_RC_KEYP}
+	export RC_ZONE=use-1
+	export RC_ZONE=usw-2
+	export RC_CMMS=chef
+	export RC_CMSV=server
+	if test -z "$RC_CMSA" ; then
+		export RC_CMSA=$RC_ACCT
+	fi
+	if test -z "$RC_KEYP" ; then
+		export RC_KEYP=$RC_USER
+	fi
+fi

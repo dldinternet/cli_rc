@@ -1,0 +1,29 @@
+#!/bin/bash
+
+source $RC_DIR/colors.rc
+cdpath() {
+
+	if ! [ -z "$1" ] ; then
+
+        if ! echo $CDPATH | `which egrep` -q "(^|:)$1($|:)" ; then
+          export CDPATH
+          if [ "$2" = "after" ] ; then
+            CDPATH=$CDPATH:$1
+          else
+            CDPATH=$1:$CDPATH
+          fi
+		      echo "${fg_yellow}${CDPATH}${reset}"
+          return 0
+        else
+		      echo "${fg_red}${CDPATH}${reset}"
+          return 1
+        fi
+
+	else
+		echo "${fg_green}${CDPATH}${reset}"
+	fi	
+
+}
+
+export -f cdpath
+export cdpath

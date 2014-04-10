@@ -1,0 +1,22 @@
+#!/bin/bash
+
+check_dir RC_DIR
+ret=$?
+if [ 0 -eq $ret ] ; then
+
+	check_vars RC_CLOUD RC_ACCT RC_USER RC_ZONE
+
+	if [ 0 -eq $ret ] ; then
+
+		rc="${RC_DIR}/${RC_CLOUD}/${RC_ACCT}/${RC_USER}/${RC_ZONE}.rc"
+
+		source_rc $rc
+
+		check_file AWS_KEY_PATH
+
+		check_URL EC2_URL
+
+	fi
+
+	echo "${bold}${fg_green}rc done.${reset}"
+fi

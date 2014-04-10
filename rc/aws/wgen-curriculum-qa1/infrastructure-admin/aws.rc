@@ -1,0 +1,3 @@
+#!/bin/bash
+#set -x
+. ${RC_DIR}/aws/rc_user.rc

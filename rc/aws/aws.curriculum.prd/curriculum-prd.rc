@@ -1,0 +1,5 @@
+#!/bin/bash
+#set -x
+
+export AWS_KEYPAIR_NAME; AWS_KEYPAIR_NAME={YOUR_KEY_NAME}
+#export AWS_KEY_PATH; AWS_KEY_PATH=${RC_DIR}/aws/${RC_ACCT}/${RC_KEYP}/${RC_KEYP}-${RC_ACCT}-${RC_ZONE}.pem

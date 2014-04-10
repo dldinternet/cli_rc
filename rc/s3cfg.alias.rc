@@ -1,0 +1,1 @@
+alias s3cmd='/usr/local/bin/s3cmd --config=$AWS_S3CFG'

@@ -1,0 +1,595 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"PROMPT",
+				"PROMPT_COMMAND"
+			],
+			[
+				"DEF",
+				"DEFAULT_DOCROOT"
+			],
+			[
+				"defa",
+				"defaultOptions"
+			],
+			[
+				"un",
+				"unattended"
+			],
+			[
+				"gam",
+				"gam_map"
+			],
+			[
+				"P",
+				"PUBLIC_NAME"
+			],
+			[
+				"CHEF",
+				"CHEF_USER"
+			],
+			[
+				"gs",
+				"gsub"
+			],
+			[
+				"PRO",
+				"PROMPT_COMMAND"
+			],
+			[
+				"links",
+				"links_home"
+			],
+			[
+				"EC",
+				"EC2"
+			],
+			[
+				"RC",
+				"RC_DIR"
+			],
+			[
+				"check",
+				"check_vars"
+			],
+			[
+				"vag",
+				"vagrant-chef-1"
+			],
+			[
+				"pri",
+				"private_network_ip_ets"
+			],
+			[
+				"in",
+				"include_recipe	include_recipe"
+			],
+			[
+				"twc",
+				"twc_vm_mem"
+			],
+			[
+				"web_",
+				"web_listen_port"
+			],
+			[
+				"xorg-",
+				"xorg-x11-server-Xorg"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Preferences: Hex Viewer Key Bindings – Default"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/christo/Dropbox/DLDInternet/rc/aws.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-prod-web/whisk.yaml",
+		"/Users/christo/.chef/knife.rb",
+		"/Users/christo/Dropbox/DLDInternet/rc/chef.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/chef/server/aws-digital-prod-web.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-dev-web/cj.upload.s3cfg",
+		"/private/tmp/5e5d4779-49f3-4d1a-9a9b-f5bf93ae2a12.json",
+		"/private/tmp/5e5d4779-49f3-4d1a-9a9b-f5bf93ae2a12-input.json",
+		"/Users/christo/Library/VirtualBox/VirtualBox.xml",
+		"/Users/christo/.ssh/config",
+		"/private/etc/hosts",
+		"/Users/christo/Library/Python/2.7/bin/s3cmd",
+		"/Users/christo/Dropbox/DLDInternet/ws/ssg/Deployment/chef/bootstrap/chef-full.erb",
+		"/Users/christo/Dropbox/DLDInternet/rc/chef/server/aws-digital-dev-web.rc",
+		"/Users/christo/.chef/client.rb",
+		"/var/folders/44/yqnd9hdd7z9gfkvl0x0hfh3w0000gn/T/knife-edit-435205376175852474654.js",
+		"/private/tmp/akamai-http-ips.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/twc_cms/docroot/index.php",
+		"/Users/christo/Dropbox/DLDInternet/ws/twc_cms/docroot/sites/sites.php",
+		"/Users/christo/Dropbox/DLDInternet/ws/twc_cms-esi/docroot/index.php",
+		"/Users/christo/Library/VirtualBox/VBoxSVC.log",
+		"/Users/christo/Library/VirtualBox/xpti.dat",
+		"/Users/christo/Library/VirtualBox/compreg.dat",
+		"/private/tmp/pra.lst",
+		"/Users/christo/Downloads/PRA.vcf",
+		"/Users/christo/Dropbox/DLDInternet/rc/christo.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/cdpath.rc",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-ec2",
+		"/private/tmp/hosts",
+		"/private/tmp/ugc.probs",
+		"/private/tmp/json/11784b41-9b75-4b39-b6b0-f0ee68e91dfe.json",
+		"/etc/syslog.conf",
+		"/Users/christo/.akamai_api.yml",
+		"/Users/christo/Dropbox/DLDInternet/ws/twc_cms/.git/rebase-merge/git-rebase-todo",
+		"/Users/christo/Dropbox/DLDInternet/ws/UGC/docroot/sites/default/files/_version.ini",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/dldinternet/credentials-christo.csv",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/remote/deploy-build.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-smoke-drupal.sh",
+		"/private/tmp/variants",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-update-drupal.sh",
+		"/tmp/crontab.WWxEUfI4i1",
+		"/Users/christo/Dropbox/DLDInternet/bin/watch-etc-hosts.rb",
+		"/tmp/crontab.dqUcigxcrg",
+		"/Users/christo/Dropbox/DLDInternet/rc/git.rc",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-ugc-drupal-update.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-collect-logs.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/remote/update-build.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-update-drupal-one-ip.sh",
+		"/opt/local/etc/openssl/cert.pem",
+		"/private/etc/php.ini",
+		"/etc/php.ini",
+		"/private/tmp/81.log",
+		"/private/tmp/100.log",
+		"/private/tmp/91.log",
+		"/private/tmp/92.log",
+		"/Users/christo/Dropbox/DLDInternet/ws/UGC/.git/COMMIT_EDITMSG",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-qa-web/credentials-aws-digital-qa-web-ugc.upload.csv.txt",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-ugc-drupal.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-ugc-drupal-reinstall.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/logs/reinstall/10.225.32.174.log",
+		"/private/tmp/enum-instances.rb",
+		"/private/tmp/new-instances.rb",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/remote/reconfigure-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-chef-settings-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/remote/uninstall-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/ingest/00e3a488-02c1-4abc-a528-322eae2f3bd4.json",
+		"/private/tmp/b1.html",
+		"/Users/christo/Dropbox/DLDInternet/MBP/.ssh/config",
+		"/Users/christo/Dropbox/DLDInternet/TWC/.ssh/config.backup",
+		"/Users/christo/Dropbox/DLDInternet/reboot-instances",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-ugc-drupal-reconfigure.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-reinstall-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/knife ec2 server create --image ami-bd1d54d4 --ssh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-reconfigure-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/remote/reinstall-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/ingest/1.json",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-common.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-deploy-build.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/brella-ugc-drupal-deploy.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/bella-ugc-drupal-deploy.lst",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts/remote/deploy-ugc-build.sh",
+		"/Users/christo/Dropbox/DLDInternet/rc/rvm.profile.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-prod-psg/cdelange.s3cfg",
+		"/private/tmp/chef-solo.json",
+		"/Users/christo/Downloads/hosts",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws (christotwc's conflicted copy 2013-11-18).rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws-digital-web.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/chef.profile.rc",
+		"/Users/christo/.ssh/config.screwed",
+		"/Users/christo/Dropbox/DLDInternet/rc/subshell.rc",
+		"/Users/christo/Dropbox/DLDInternet/TWC/.chef/validation.pem",
+		"/Users/christo/Dropbox/DLDInternet/TWC/.chef/client.rb",
+		"/Users/christo/Dropbox/DLDInternet/TWC/.chef/client.pem",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/ugc-asset.sql",
+		"/Users/christo/Downloads/ugc-2.sql",
+		"/Users/christo/Dropbox/DLDInternet/bin/assh",
+		"/Users/christo/Dropbox/DLDInternet/bin/ascp",
+		"/Users/christo/.ssh/twc-aws-web-dev.config.advanced",
+		"/Users/christo/.ssh/config.advanced",
+		"/Users/christo/.ssh/twc-aws-dig-prod.config.advanced",
+		"/Users/christo/.ssh/known_hosts",
+		"/Users/christo/Dropbox/DLDInternet/ws/ssg/Deployment/chef/cookbooks/web-dampp/CHANGELOG.md",
+		"/Users/christo/.ssh/config.backup",
+		"/private/tmp/port",
+		"/private/tmp/a",
+		"/Users/christo/.ssh/dldinternet.config.advanced",
+		"/Users/christo/Dropbox/DLDInternet/ops/ban/commonEXEMPT.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/gems/sync.sh",
+		"/Users/christo/Dropbox/DLDInternet/ws/gems/excludes",
+		"/Users/christo/Dropbox/DLDInternet/ws/ssg/Deployment/web/etc/REBOOT-CI-DrupalFS-webProd.ini",
+		"/Users/christo/Dropbox/DLDInternet/drupal_http_request_fails.sql",
+		"/private/tmp/do",
+		"/private/tmp/yanks",
+		"/var/folders/44/yqnd9hdd7z9gfkvl0x0hfh3w0000gn/T/bash-fc-1383075315",
+		"/private/tmp/brella-ugc-drupal.lst",
+		"/Users/christo/Dropbox/DLDInternet/brella-patch-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/brella-si-drupal.sh",
+		"/Users/christo/Dropbox/DLDInternet/rc/aliases.rc",
+		"/Users/christo/Dropbox/DLDInternet/ws/ugc-1.0.1/docroot/patches/bootscrap-inc-remote-addr.patch",
+		"/Users/christo/Dropbox/DLDInternet/ws/ssg/Deployment/chef/cookbooks/web-dampp/templates/default/var/www/backup/config.rb.erb",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-qa-web.rc",
+		"/Users/christo/.ssh/twc-aws-web-prod.config.advanced",
+		"/Users/christo/.ssh/twc-aws-specific.config.advanced",
+		"/etc/hosts",
+		"/Users/christo/Dropbox/DLDInternet/ws/ssg/Deployment/chef/cookbooks/web-dampp/templates/default/var/www/backup/models/node.rb.erb",
+		"/var/folders/44/yqnd9hdd7z9gfkvl0x0hfh3w0000gn/T/bash-fc-1381811417",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-prod-web/cdelange.rc",
+		"/Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-prod-web.rc"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/christo/Dropbox/DLDInternet/ws/ugc.misc.KEEP/brella-scripts",
+			"/Users/christo/Dropbox/DLDInternet/ws/puppet2chef/vendor/ruby/1.9.1/gems/cucumber-1.3.5/lib",
+			"/Users/christo/Dropbox/DLDInternet/ws/puppet2chef/lib",
+			"/Users/christo/Dropbox/DLDInternet/ws/puppet2chef",
+			"/Users/christo/Dropbox/DLDInternet/ws/puppet2chef/vendor/ruby/1.9.1/gems/cucumber-1.3.5",
+			"/Users/christo/Dropbox/DLDInternet/ws/puppet2chef/lib/puppet2chef/",
+			"/Users/christo/Dropbox/DLDInternet/ws/puppet2chef/lib/puppet2chef/formatter",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"default",
+			"shell",
+			"\\s+80,.*$",
+			"\\s+.*$",
+			"install",
+			"3",
+			",\\s+",
+			":([0-9]{3})[ -]([0-9]{3})-([0-9]{4})",
+			":([0-9]{3})-([0-9]{3})-([0-9]{4})",
+			";OTHER;",
+			"^",
+			",",
+			":~/Dropbox/DLDInternet/ws/",
+			"/",
+			"moDXXzR8/K0SL4KolfoQrW1SSEcm2wjIWP5zT+tN",
+			"^(processBatch|Count).*\\n",
+			"^\\.+.*\\n",
+			"^\\.*.*\\n",
+			"^\\.*\\n",
+			"\\s+.*\\n",
+			"\\s+.*",
+			"ERROR: ",
+			"ERROR",
+			": dead\\n",
+			" ",
+			">",
+			"\\>",
+			"s\\>",
+			"unicode",
+			"detect_",
+			"GlobalSign",
+			"Global",
+			"500",
+			"logs",
+			"\\/",
+			",",
+			"1b",
+			"ssh",
+			"gbIiViARwVeQ02I3a07MaZXsdhwzoRw4dXecnwgj",
+			"coll",
+			"pcoll",
+			"loc",
+			"keyword",
+			"wx",
+			"coll",
+			"pcoll",
+			"loc",
+			"keyword",
+			"geo",
+			"pcoll",
+			"poll",
+			"geo",
+			"gw.vpc.use1.dev.web",
+			"Host 10.224.224.*\n  ProxyCommand assh -q gw.vpc.use1.dev.web -t nc %h %p\n  user $AWS_SSH_USERNAME\n  userknownhostsfile /dev/null\n  stricthostkeychecking no\n  passwordauthentication no\n  identityfile $AWS_KEY_PATH\n  identitiesonly yes\n\n",
+			"[ \\t]+.*",
+			"\\s+.*",
+			"Host vm[0-9]+\n  protocol 2\n  user root\n  port 22\n  connecttimeout 60\n  identityfile ~/.ssh/id_rsa.twc\n\n",
+			"dev.dir",
+			"dev.dir.psg",
+			"dev.dir.psg.weather.com",
+			"advanced",
+			"\nHost 10.225.32.*\n  user twc-user\n  userknownhostsfile /prod/null\n  stricthostkeychecking no\n  passwordauthentication no\n  identityfile $RC_DIR/aws/aws-digital-prod-web/cdelange/cdelange-aws-digital-prod-web-use-1.pem\n  identitiesonly yes\n",
+			"*\n",
+			"francis",
+			"ginger",
+			"patch",
+			"^[^1].+$\\n",
+			"^$\\n",
+			"^$",
+			"^[^1][^\\n]+",
+			"^[^1]\\S+$",
+			"^[^1]\\S+",
+			"^[^1]\\S+*",
+			"^[^1][]*\\n",
+			"^[^1][^\\n]*\\n",
+			"^[^1].*\\n",
+			"^[^=].*\\n",
+			"^[~=].*\\n",
+			"^10",
+			"\nknife ec2 server create --image ami-7ba3f212 --flavor m1.xlarge --region us-east-1 --tags Name=Brella-UGC-Drupal-webprod-useast1b-04,project=Brella,role=webUGCDrupal,environment=webProd,function=Drupal,category=UGC --security-group-ids sg-b2892cdd,sg-5b58e534 --subnet subnet-18654276 --availability-zone us-east-1b --ssh-key cdelange --ssh-user twc-user --identity-file /Users/christo/Dropbox/DLDInternet/rc/aws/aws-digital-prod-web/admin/admin-aws-digital-prod-web-use-1.pem --ssh-gateway ec2-user@gw.vpc.use1.prod.web.weather.com --ssh-config false --environment webProd --run-list role['webUGCDrupal'] --node-name Brella-UGC-Drupal-webprod-useast1b-04 --template-file /Users/christo/Dropbox/DLDInternet/ws/ssg/Deployment/chef/bootstrap/chef-full.erb --bootstrap-version 11.6.0.hotfix.1 --verbose\n\n10.225.32.174\n--------------------------------\n",
+			"$",
+			"^",
+			"prod",
+			"1c",
+			"prod",
+			"10",
+			"dev",
+			"Host gw.vpc.use1.dev.web.weather.com\n	Hostname gw.vpc.use1.dev.web.weather.com\n	Port 22\n	IdentityFile ~/.ssh/id_rsa.sechastain\n	User ec2-user\n	ProxyCommand ssh -q -t web-vm2.psg.weather.com nc %h %p\n\nHost dev.ingester.ugc.web\n	Hostname dev.ingester.ugc.web\n	Port 22\n	IdentityFile ~/.ssh/id_rsa.sechastain\n	User ec2-user\n	ProxyCommand ssh -q -t gw.vpc.use1.dev.web.weather.com nc %h %p\n\n",
+			"Dev",
+			"dev",
+			"1b",
+			"\n	echo \"${fg_br_magenta}${fg_bold}RC_CMSA${reset}\"\n	cd ${RC_DIR}/aws\n	accounts=$(find . -maxdepth 1 -type d | egrep -v -e '^(\\.|\\.\\.)$' | sed -e 's/\\.\\/*//')\n	for a in $accounts ; do echo $a ; done\n	# for f in `ls */*.rc 2>/dev/null | sort | uniq` ; do\n	# 	echo $f\n	# done\n	cd $OLDPWD\n",
+			"=$",
+			"cdelange",
+			"a1123",
+			", ",
+			"44",
+			"qa",
+			"prod",
+			"web",
+			"chef",
+			"qa",
+			"[\",]",
+			"\\s+$",
+			"\\].*",
+			"^\\s+end.*\\n",
+			"^\\s+opts\\..*\\n",
+			"<(.*?)>",
+			"    opts.on('-o', '--optionfile OPTIONFILE' \"The path to a text file that includes installation options.\" ) do |v|\n      options[:damp_optionfile] = v\n    end\n",
+			"^.*no hostip for proxy command.*\\n",
+			"php",
+			"chef-11",
+			"chef",
+			"Drupal",
+			"gem",
+			"qa",
+			"ec2-user",
+			"@options",
+			"ap",
+			"'/usr/local/bin'",
+			"relink",
+			"\"",
+			"',\n",
+			"\n			",
+			"\n    ",
+			"\\n",
+			"\\n\\n+",
+			"^       "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"\\n",
+			":($1) $2-$3",
+			"($1) $2-$3",
+			";WORK;",
+			"TEL;WORK;VOICE:",
+			",\\n",
+			"",
+			"\\n",
+			"",
+			"\\nERROR",
+			",",
+			"",
+			"/",
+			">",
+			"1d",
+			"",
+			"=10",
+			"\",",
+			"\"",
+			"\" -H \"",
+			"",
+			"$1",
+			"\\1",
+			"$1",
+			"",
+			"$1",
+			"",
+			"'\"",
+			"options",
+			"target",
+			"#{verb}",
+			"'",
+			" ",
+			"\\n",
+			"",
+			"\\\\n",
+			"\\\\n ",
+			"\\n ",
+			"  ",
+			" ",
+			", ",
+			" ",
+			"s",
+			"t",
+			"=",
+			"$3$2$2 => $1,",
+			"",
+			"'",
+			"setab",
+			"-dev-web",
+			"$1",
+			"$1 = $2",
+			"[$1]",
+			"=",
+			"$RC_DIR/aws/digital-nonprod-weather/cdelange/cdelange-aws-digital-nonprod-weather-use-1.pem",
+			"$1 = $2",
+			"gw.vpc.use1.prod.psg",
+			"[$1]",
+			"[$2]",
+			"[$1]",
+			"#",
+			"$1",
+			"$1 = $2",
+			"[$1]",
+			"-dev-web",
+			"~/Dropbox/DLDInternet/ssh/id_dldi",
+			"base",
+			"\\\\$",
+			"$",
+			"dropbox-sync",
+			" ",
+			"\"",
+			"",
+			"\\n",
+			"']\\1",
+			"",
+			"    ",
+			"\\n",
+			"Promise",
+			"promise",
+			"modjule",
+			"Module",
+			"Modules",
+			"modules",
+			"module_",
+			"ModulesLoader",
+			"Puppet2Chef",
+			"_promise",
+			"_modules",
+			"Promise",
+			"promise",
+			"Promise",
+			"promise",
+			"modjule",
+			"Puppet",
+			"Puppet2Chef",
+			"/puppet/",
+			"puppet2chef/",
+			"Puppet2Chef",
+			"puppet2chef/",
+			"Puppet2Chef",
+			"puppet2chef/",
+			"Puppet2Chef",
+			"\\t",
+			"\\n",
+			""
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 35.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 97.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 362.0,
+	"status_bar_visible": true
+}

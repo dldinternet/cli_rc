@@ -1,0 +1,45 @@
+#!/bin/bash
+
+function parse_git_hosts {
+	hosts=$(git remote -v | ruby -e ' \
+		require "resolv"
+		h={}; \
+		ARGF.each_line{ |l| \
+			h[l.gsub(/^.*?@/,"").gsub(%r([:/].*\n),"")]=true \
+		} ; \
+		h.keys.map{ |k| \
+			begin ; print Resolv.getaddress k ; rescue ; end \
+		} ' \
+			| sort | uniq)
+	if test '' == "$hosts" ; then
+		r=1
+	else
+		r=0
+	fi	
+	for h in $hosts ; do
+		ping -o -q -Q -t 1 $h 2>&1 >/dev/null
+		let r=r+$?
+	done
+	echo $r	
+}
+
+function parse_git_dirty {
+	if [ -d .git ] ; then
+		r=$(parse_git_hosts)
+		if test '0' == "$r" ; then
+			[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+		fi
+	fi
+}
+function parse_git_branch {
+			# echo '[git repo error]'
+			# return
+	if [ -d .git ] ; then
+		r=$(parse_git_hosts)
+		if test '0' == "$r" ; then
+			git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ [\1$(parse_git_dirty)] /"
+		else
+			echo '[git repo error]'
+		fi
+	fi
+}

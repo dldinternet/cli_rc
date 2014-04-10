@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ktwc () {
+	export RC_ACCT={YOUR_RC_ACCT}
+	export RC_CMSA={YOUR_RC_CMSA}
+	export RC_USER={YOUR_RC_USER}
+	export RC_KEYP={YOUR_RC_KEYP}
+	aws.sh
+}
+
+ktwcp () {
+	export RC_ACCT={YOUR_RC_ACCT}
+	export RC_CMSA={YOUR_RC_CMSA}
+	export RC_USER={YOUR_RC_USER}
+	export RC_KEYP={YOUR_RC_KEYP}
+	aws.sh
+}
+

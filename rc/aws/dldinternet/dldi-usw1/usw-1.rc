@@ -1,0 +1,10 @@
+#!/bin/bash
+. ${RC_DIR}/aws/usw-1.rc
+
+export AWS_ACCESS_KEY; AWS_ACCESS_KEY='{YOUR_ACCESS_KEY}'
+export AWS_SECRET_KEY; AWS_SECRET_KEY='{YOUR_SECRET_KEY}'
+
+export AWS_KEY_PATH; AWS_KEY_PATH=${RC_DIR}/aws/dldinternet/dldi-usw-1.pem
+export AWS_KEYPAIR_NAME; AWS_KEYPAIR_NAME={YOUR_KEY_NAME}
+
+. ${RC_DIR}/aws/dldinternet.rc

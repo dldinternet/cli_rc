@@ -1,0 +1,5 @@
+#!/bin/bash
+
+. $RC_DIR/accounts/poc.rc
+
+export RC_KEYP={YOUR_RC_KEYP}

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+. $RC_DIR/pathmunge.rc
+
+. $RC_DIR/aliases.rc
+
+. $RC_DIR/ps.rc
+
+pathmunge /usr/local/bin after
+
+pathmunge ~/Dropbox/DLDInternet/bin after
+
+#echo $PATH
+#. /etc/bashrc #2>/dev/null
+#echo update_terminal_cwd?
+#type -t update_terminal_cwd 2>/dev/null
+if [ "function" != "`type -t update_terminal_cwd 2>/dev/null`" ] ; then
+	# Tell the terminal about the working directory at each prompt.
+	if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ] ; then
+	    update_terminal_cwd() {
+	        # Identify the directory using a "file:" scheme URL,
+	        # including the host name to disambiguate local vs.
+	        # remote connections. Percent-escape spaces.
+			local SEARCH=' '
+			local REPLACE='%20'
+			local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+			printf '\e]7;%s\a' "$PWD_URL"
+	    }
+	    declare -x update_terminal_cwd
+	    #echo $PROMPT_COMMAND
+	    if [ -z "`echo $PROMPT_COMMAND | egrep update_terminal_cwd`" ] ; then
+	    	export PROMPT_COMMAND; PROMPT_COMMAND="update_terminal_cwd; $PROMPT_COMMAND"
+	    fi
+	fi
+fi
+#type -t update_terminal_cwd 2>/dev/null
+export PS1=$RC_PS1

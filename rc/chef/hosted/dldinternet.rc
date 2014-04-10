@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export KNIFE_CLIENT_NAME; KNIFE_CLIENT_NAME=dldinternet
+export KNIFE_CLIENT_KEY; KNIFE_CLIENT_KEY=$RC_DIR/chef/hosted/dldinternet/dldinternet.pem
+
+export KNIFE_VALIDATION_CLIENT_NAME; KNIFE_VALIDATION_CLIENT_NAME=dldinternet-validator
+export KNIFE_VALIDATION_KEY; KNIFE_VALIDATION_KEY=$RC_DIR/chef/hosted/dldinternet/dldinternet-validator.pem
+
+export KNIFE_CHEF_SERVER_URL; KNIFE_CHEF_SERVER_URL=https://api.opscode.com/organizations/dldinternet
+
+. ${RC_DIR}/chef/server.rc

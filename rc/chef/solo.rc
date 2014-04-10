@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#echo solo.rc
+. ${RC_DIR}/chef.rc
+

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+alias ccg='cld create group'
+alias dcg='dld create group'
+alias lcg='lsa create group'
+
+alias be=berks
+alias bs='berks shelf'
+alias g=git
+alias ccg='cdl create group'
+
+alias ga='git add'
+alias gb='git branch'
+alias gd='git diff'
+alias gl='git log'
+alias gr='git remote'
+alias gs='git status'
+alias gp='git format-patch develop --stdout'
+
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bil="bi --local"
+alias bl="b list"
+alias blp="bl --paths"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+
+alias k=knife
+alias kc='knife client'
+alias kn='knife node'
+alias kr='knife recipe'
+alias kro='knife role'
+alias kcb='knife cookbook'
+alias kdb='knife data bag'
+alias ke='knife environment'
+alias ku='knife user'
+alias kes='knife ec2 server'
+alias kesl='knife ec2 server list'
+
+alias r=rake
+
+alias v=vagrant
+alias vs='vagrant status'
+
+alias zf=zf.sh
+
+alias e2di='ec2-describe-instances | egrep -e ^I'
+
+touch ${RC_DIR}/s3cfg.alias.rc
+. ${RC_DIR}/s3cfg.alias.rc

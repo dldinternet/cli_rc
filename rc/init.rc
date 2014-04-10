@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source $RC_DIR/initfunc.rc
+source $RC_DIR/ec2.rc
+#source $RC_DIR/chef.rc

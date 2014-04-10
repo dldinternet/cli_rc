@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export RC_ACCT={YOUR_RC_ACCT}
+export RC_KEYP={YOUR_RC_KEYP}

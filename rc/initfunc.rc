@@ -1,0 +1,159 @@
+#!/bin/bash
+
+source $RC_DIR/colors.rc
+
+check_var() {
+	local var=$1
+	local msg=$2
+	if [ "$msg" == "" ] ; then
+		msg=1
+	fi
+	eval val=\$$var
+	#echo "${bold}${fg_white}$var='$val'${reset}"
+	if [ -z "$val" ] ; then
+		if [ "$msg" == "1" ] ; then
+			echo "${bold}${fg_red}ERROR: $var is not valid ($val)${reset}"
+		fi
+		return 1
+	fi
+	return 0
+}
+check_dir() {
+	local var=$1
+	local msg=$2
+	if [ "$msg" == "" ] ; then
+		msg=1
+	fi
+	#echo "${bold}${fg_white}var='$var'${reset}"
+	check_var $var $msg
+	local ret=$?
+	if [ 0 -eq $ret ] ; then
+		local val=""
+		eval val=\$$var
+		#echo "${bold}${fg_white}val='$val'${reset}"
+		if [ ! -d $val ] ; then
+			if [ "$msg" == "1" ] ; then
+				echo "${bold}${fg_red}ERROR: $var is not valid ($val)${reset}"
+			fi
+			ret=1
+		fi
+	fi
+	return $ret
+}
+check_file() {
+	local var=$1
+	#echo "check_file: var=$var"
+	local msg=$2
+	if [ "$msg" == "" ] ; then
+		msg=1
+	fi
+	check_var $var $msg
+	local ret=$?
+	if [ 0 -eq $ret ] ; then
+		eval val=\$$var
+		if [ "$msg" == "0" ] ; then
+			val=$var
+		fi
+		if [ ! -f $val ] ; then
+			#echo "msg=[$msg]"
+			if [ "$msg" == "1" ] ; then
+				echo "${bold}${fg_red}ERROR: $var is not valid ($val)${reset}"
+			fi
+			ret=1
+		fi
+	fi
+	return $ret
+}
+function check_key() {
+	local var=$1
+	local msg=$2
+	if [ "$msg" == "" ] ; then
+		msg=1
+	fi
+	check_file $var $msg
+	local ret=$?
+	if [ 0 -eq $ret ] ; then
+		eval val=\$$var
+		if [ "$msg" == "0" ] ; then
+			val=$var
+		fi
+		chmod 600 $val
+		ret=$?
+	fi
+	return $ret
+}
+check_URL() {
+	local var=$1
+	#echo "${bold}${fg_white}$var${reset}"
+	local ret=1
+	check_var $var
+	ret=$?
+	if [ 0 -eq $ret ] ; then
+		eval val=\$$var
+		proxy=''
+		if [ ! -z "$RC_PROXY" ] ; then
+			proxy="--proxy $RC_PROXY --proxytunnel"
+		fi
+		#set -x
+		curl ${proxy} --max-time 10 -k -s -S -I -o /dev/null $val 2>/dev/null
+		ret=$?
+		#set +x
+
+		if [ 0 -ne $ret ] ; then
+			echo "${bold}${fg_red}ERROR: $var is not valid ($val)${reset}"
+		fi
+	fi
+	return $ret
+}
+source_rc() {
+	rc=$1
+	check_file $rc 0
+	local ret=$?
+	if [ 0 -eq $ret ] ; then
+		echo "${fg_yellow}If you wish to avoid a subshell manually apply these settings this way: . $rc ${reset}"
+		. $rc
+	else
+		local ok=0
+		echo "${bold}${fg_red}ERROR: source_rc: rc file is not valid ($rc)${reset}"
+		#ls -al $rc
+		#echo "ret=$ret"
+		#read x
+		local dir=$rc
+		while [ ! -z "$dir"  -a "$dir" != "/" ] ; do
+			dir=$(dirname $dir)
+			#echo "${bold}${fg_white}$dir${reset}"
+			#read x
+			check_dir dir
+			rv=$?
+			if [ 0 -eq $rv -a $ok -eq 0 ] ; then
+				echo "${bold}${fg_white}$dir was found and contains:${reset}"
+				ls $dir
+				ok=1
+			fi
+		done
+	fi
+	return $ret
+}
+check_vars() {
+	local var=''
+	for var in $* ; do
+		check_var $var
+		rv=$?
+		if [ 0 -eq $ret ] ; then
+			ret=$rv
+		fi 
+	done
+}
+
+check_dir RC_DIR 0
+ret=$?
+if [ 0 -ne $ret ] ; then
+	if [ -L $0 ] ; then
+		#ls -l $0
+		RC_DIR=$(ls -al $0 | awk '{ print $11 }')
+		export RC_DIR=$(dirname $RC_DIR)
+	else
+		export RC_DIR=$(dirname $0)
+	fi
+fi
+

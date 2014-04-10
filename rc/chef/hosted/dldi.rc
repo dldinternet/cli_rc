@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export KNIFE_CLIENT_NAME; KNIFE_CLIENT_NAME={YOUR_KNIFE_CLIENT_NAME}
+export KNIFE_CLIENT_KEY; KNIFE_CLIENT_KEY=$RC_DIR/chef/hosted/dldi.pem
+
+export KNIFE_VALIDATION_CLIENT_NAME; KNIFE_VALIDATION_CLIENT_NAME=dldi-validator
+export KNIFE_VALIDATION_KEY; KNIFE_VALIDATION_KEY=$RC_DIR/chef/hosted/dldi-validator.pem
+
+export KNIFE_CHEF_SERVER_URL; KNIFE_CHEF_SERVER_URL=https://api.opscode.com/organizations/dldi
+
+. ${RC_DIR}/chef/server.rc

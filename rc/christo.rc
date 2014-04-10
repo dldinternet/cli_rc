@@ -1,0 +1,127 @@
+#!/bin/bash
+
+# are we an interactive shell?
+if [ "$PS1" ] ; then
+
+    case $TERM in
+	xterm*)
+		if [ -e /etc/sysconfig/bash-prompt-xterm ]; then
+			PROMPT_COMMAND=/etc/sysconfig/bash-prompt-xterm
+		else
+			#if [ "`basename $BASH`" == "bash" ]; then
+	    		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\007"'
+	    	#else
+	    	#fi
+		fi
+		;;
+	screen)
+		if [ -e /etc/sysconfig/bash-prompt-screen ]; then
+			PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+		else
+			PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}"; echo -ne "\033\\"'
+		fi
+		;;
+	*)
+		[ -e /etc/sysconfig/bash-prompt-default ] && PROMPT_COMMAND=/etc/sysconfig/bash-prompt-default
+	    ;;
+    esac
+	prompt () {
+		PROMPT_COMMAND=$PROMPT
+	}
+fi
+
+#echo update_terminal_cwd
+#type -t update_terminal_cwd 2>/dev/null
+if [ "function" != "`type -t update_terminal_cwd 2>/dev/null`" ] ; then
+	# Tell the terminal about the working directory at each prompt.
+	if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ -z "$INSIDE_EMACS" ] ; then # && [ "`basename $BASH`" == "bash" ]
+	    update_terminal_cwd() {
+	        # Identify the directory using a "file:" scheme URL,
+	        # including the host name to disambiguate local vs.
+	        # remote connections. Percent-escape spaces.
+			local SEARCH=' '
+			local REPLACE='%20'
+			local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+			printf '\e]7;%s\a' "$PWD_URL"
+	    }
+	    PROMPT_COMMAND="update_terminal_cwd; $PROMPT_COMMAND"
+	fi
+fi
+
+export PATH
+
+# TODO: Set path to your RC_DIR
+. {PATH}/defaults.rc
+
+. $RC_DIR/rc.profile.rc
+
+. $RC_DIR/completion.rc
+
+# TODO: Delete / Replace
+# Example of custom account functions
+. $RC_DIR/aws-dldinternet.rc
+
+[ "\\h:\\W \\u\\\$ " = "$PS1" ] && export PS1=$RC_PS1
+export PS2='> '
+export PS4='+ '
+
+# MacPorts Installer addition on 2013-02-14_at_12:19:56: adding an appropriate PATH variable for use with MacPorts.
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+shopt -q login_shell && pathmunge /opt/local/sbin
+shopt -q login_shell && pathmunge /opt/local/bin
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# TODO:
+# Example CDPATH - set to taste
+export CDPATH=.:~/:~/Amplify/ws:~/Amplify/ws/section-31:/opt:/usr:/var:~:~/Documents
+export HISTIGNORE="&:ls:[bf]g:[ ]*:exit"
+export HISTCONTROL="erasedups:ignoreboth"
+shopt -s histappend
+shopt -s cmdhist
+if [ -t 0 ] ; then
+	stty stop ""
+fi
+
+export PROMPT_COMMAND
+if [ -z "$PROMPT_COMMAND" ] ; then
+	PROMPT_COMMAND="history -a"
+else
+	PROMPT_COMMAND="${PROMPT_COMMAND}; history -a"
+fi
+export IGNOREEOF=1
+alias ll="ls -al $*"
+alias gam='. ~/Dropbox/DLDInternet/gam/bin/activate'
+export EDITOR='/usr/local/bin/subleditor'
+
+
+export PAGER=less
+export LESS=-r
+
+### Added by the Heroku Toolbelt
+#export PATH="/usr/local/heroku/bin:$PATH"
+#pathmunge /usr/local/heroku/bin
+#export PATH=$PATH:/usr/local/bin
+export GIT_SSH=ssh
+
+# TODO: Enable or delete to taste
+#defaults write -g ApplePressAndHoldEnabled -bool false
+#defaults write com.apple.dashboard devmode YES
+#defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
+#defaults write com.apple.finder AppleShowAllFiles TRUE
+#defaults write com.apple.screencapture type <file-extension>
+#defaults write com.apple.dashboard mcx-disabled -boolean YES
+#
+# RVM and rbenv should be used last so that their executable have high precedence on the PATH
+shopt -q login_shell
+if [[ $? -eq 0 ]] ; then
+    # Whatever profile script debugging we want to do we exclude RVM from
+	set +o xtrace
+
+	. $RC_DIR/rvm.rc
+	#. $RC_DIR/rbenv.rc
+fi
+
+# TODO: Disable if you do NOT have EC2 tools installed
+. $RC_DIR/ec2tools.rc
+
+export PROMPT="$PROMPT_COMMAND"

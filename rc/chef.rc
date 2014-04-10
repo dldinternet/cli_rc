@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. $RC_DIR/pathmunge.rc
+
+pathmunge /opt/chef/bin # after
+pathmunge /opt/chef/embedded/bin
+
+export GEM_HOME; GEM_HOME=/opt/chef/embedded/lib/ruby/gems/1.9.1
+export GEM_PATH; GEM_PATH=/opt/chef/embedded/lib/ruby/gems/1.9.1
+
+echo "${bold}${fg_green}rc done.${reset}"

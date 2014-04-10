@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. /etc/zce.rc
+#export PATH=$ZCE_PREFIX/bin:$ZCE_PREFIX/mysql/bin:$PATH
+pathmunge $ZCE_PREFIX/mysql/bin
+pathmunge $ZCE_PREFIX/bin
+

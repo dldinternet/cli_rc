@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Example
+# TODO: Replace/ Delete
+
+dldi () {
+	export RC_ACCT={YOUR_RC_ACCT}
+	export RC_CMSA={YOUR_RC_CMSA}
+	export RC_USER={YOUR_RC_USER}
+	export RC_KEYP={YOUR_RC_KEYP}
+	#aws.sh
+	export KNIFE_CHEF_SERVER_INT_IP=`host api.opscode.com 2>/dev/null | awk '{ print $4 }'`
+	export KNIFE_CHEF_SERVER_NAME=api.opscode.com
+}
+
+aduse1 () {
+	dldi
+	aws.sh
+}
+
+adusw2 () {
+	dldi
+	export RC_ZONE=usw-2
+	aws.sh
+}
+
+adhuse1 () {
+	dldi
+	export RC_CMSV=hosted
+	aws.sh
+	#peek
+}

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+EC2_HOME=/usr/local/ec2-api-tools
+export JAVA_HOME=/Library/JAVA/Home
+export EC2_HOME=/usr/local/ec2-api-tools
+
+. ${RC_DIR}/pathmunge.rc
+
+pathmunge /usr/local/ec2-api-tools/bin after

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#echo server.rc
+#echo $PATH
+#. ${RC_DIR}/chef.rc
+
+echo "${bold}${fg_green}rc done.${reset}"
+
+check_file KNIFE_VALIDATION_KEY
+
+check_vars KNIFE_CLIENT_NAME KNIFE_VALIDATION_CLIENT_NAME
+check_file KNIFE_CLIENT_KEY
+
+check_file KNIFE_VALIDATION_KEY
+
+check_URL KNIFE_CHEF_SERVER_URL

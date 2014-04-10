@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export KNIFE_CHEF_SERVER_INT_IP; KNIFE_CHEF_SERVER_INT_IP={YOUR_KNIFE_CHEF_SERVER_INT_IP}
+export KNIFE_CHEF_SERVER_NAME  ;   KNIFE_CHEF_SERVER_NAME={YOUR_KNIFE_CHEF_SERVER_NAME}
+
+. ${RC_DIR}/chef/server/cdelange.rc
+
+. ${RC_DIR}/chef/server/web.rc

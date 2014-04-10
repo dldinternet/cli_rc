@@ -1,0 +1,13 @@
+#!/bin/bash
+#set -x
+
+. ${RC_DIR}/aws/${RC_ZONE}.rc
+
+# Default
+export AWS_KEY_PATH; AWS_KEY_PATH=${RC_DIR}/aws/${RC_ACCT}/${RC_KEYP}/${RC_KEYP}-${RC_ACCT}-${RC_ZONE}.pem
+
+. ${RC_DIR}/aws/${RC_ACCT}/${RC_KEYP}.rc
+
+. ${RC_DIR}/aws/${RC_ACCT}/${RC_USER}.rc
+
+. ${RC_DIR}/aws/${RC_ACCT}.rc

@@ -1,0 +1,36 @@
+#!/bin/bash
+#set -x
+
+# if [ ! type pathmunge &>/dev/null ] ; then
+# fi
+
+pathmunge() {
+  #set -x
+  
+	if test ! -z "$1" ; then
+    #set -x
+    echo $PATH | $(which egrep) -q -e "(^|:)$1($|:)"
+    rc=$?
+    #echo "rc: $rc"
+    if test 1 -eq $rc ; then
+      export PATH
+      if test "$2" == "after" ; then
+        PATH=$PATH:$1
+      else
+        PATH=$1:$PATH
+      fi
+      #set +x
+      #echo "$1 added $2"
+      return 0
+    else
+      #set +x
+      #echo "$1 already there"
+      return 1
+    fi
+  else
+  	echo "Usage: pathmunge <path> [after]"
+    #set +x
+    return 2
+  fi
+}
+export -f pathmunge

@@ -1,0 +1,93 @@
+#!/bin/bash
+
+export fg_black=""
+export fg_red=""
+export fg_green=""
+export fg_yellow=""
+export fg_blue=""
+export fg_magenta=""
+export fg_cyan=""
+export fg_white=""
+
+export fg_br_black=""
+export fg_br_red=""
+export fg_br_green=""
+export fg_br_yellow=""
+export fg_br_blue=""
+export fg_br_magenta=""
+export fg_br_cyan=""
+export fg_br_white=""
+
+export bold=""
+export reset=""
+
+[ -t 1 ] && { #echo 'Yes I am in a terminal'
+
+	Number_Of_colors_Supported=$(tput colors)
+	
+	[ ${Number_Of_colors_Supported} -ge 8 ] && {
+	    fg_black="$(tput setaf 0)"
+		fg_red="$(tput setaf 1)"
+		fg_green="$(tput setaf 2)"
+		fg_yellow="$(tput setaf 3)"
+		fg_blue="$(tput setaf 4)"
+		fg_magenta="$(tput setaf 5)"
+		fg_cyan="$(tput setaf 6)"
+		fg_white="$(tput setaf 7)"
+
+	    fg_br_black="$(tput setaf   8)"
+		fg_br_red="$(tput setaf     9)"
+		fg_br_green="$(tput setaf   10)"
+		fg_br_yellow="$(tput setaf  11)"
+		fg_br_blue="$(tput setaf    12)"
+		fg_br_magenta="$(tput setaf 13)"
+		fg_br_cyan="$(tput setaf    14)"
+		fg_br_white="$(tput setaf   15)"
+
+	    bg_black="$(tput setab 0)"
+		bg_red="$(tput setab 1)"
+		bg_green="$(tput setab 2)"
+		bg_yellow="$(tput setab 3)"
+		bg_blue="$(tput setab 4)"
+		bg_magenta="$(tput setab 5)"
+		bg_cyan="$(tput setab 6)"
+		bg_white="$(tput setab 7)"
+
+		bold="$(tput bold)"
+		fg_bold="$(tput bold)"
+		reset="$(tput sgr0)"
+
+		if [ ! -z "$RC_DEBUG" ] ; then
+			echo "Regular:"
+			echo "${fg_black}black${reset}"
+			echo "${fg_red}red${reset}"
+			echo "${fg_green}green${reset}"
+			echo "${fg_yellow}yellow${reset}"
+			echo "${fg_blue}blue${reset}"
+			echo "${fg_magenta}magenta${reset}"
+			echo "${fg_cyan}cyan${reset}"
+			echo "${fg_white}white${reset}"
+
+			echo "Bright:"
+			echo "${fg_br_black}black${reset}"
+			echo "${fg_br_red}red${reset}"
+			echo "${fg_br_green}green${reset}"
+			echo "${fg_br_yellow}yellow${reset}"
+			echo "${fg_br_blue}blue${reset}"
+			echo "${fg_br_magenta}magenta${reset}"
+			echo "${fg_br_cyan}cyan${reset}"
+			echo "${fg_br_white}white${reset}"
+
+			echo "Bold:"
+			echo "${bold}${fg_black}black${reset}"
+			echo "${bold}${fg_red}red${reset}"
+			echo "${bold}${fg_green}green${reset}"
+			echo "${bold}${fg_yellow}yellow${reset}"
+			echo "${bold}${fg_blue}blue${reset}"
+			echo "${bold}${fg_magenta}magenta${reset}"
+			echo "${bold}${fg_cyan}cyan${reset}"
+			echo "${bold}${fg_white}white${reset}"
+		fi
+	} #|| {	}
+
+}

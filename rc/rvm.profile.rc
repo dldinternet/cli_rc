@@ -1,0 +1,13 @@
+#!/bin/bash
+
+. $RC_DIR/rc.profile.rc
+
+. $RC_DIR/rvm.rc
+
+. $RC_DIR/ps.rc
+
+. $RC_DIR/completion.rc
+
+pathmunge /usr/local/bin after
+
+export PS1=$RC_PS1

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+. $RC_DIR/git.rc
+
+#set -x
+function parse_rvm_env () {
+	if test ! -z "`which rvm 2>/dev/null`" ; then
+		RVM_RUBY_S=`rvm info ruby 2>/dev/null | grep -v -e '^\s*$' | head -1`
+		# bg_rvm='\e[0m\e[48;16;124m'
+		bg_rvm="$(tput setaf 255)$(tput setab 124)"
+		if test ! -z "$RVM_RUBY_S" ; then
+			RVM_RUBY=`echo $RVM_RUBY_S | cut -d : -f 1`
+			export PSRVM="${bg_rvm} $RVM_RUBY ${reset}"
+		else
+			export PSRVM=""
+		fi
+	else
+		export PSRVM=""
+	fi
+	echo $PSRVM
+}
+
+RC_PS1='\e[0;30m\e[47m===== \t (\! $?) \u@\H:\w =====\e[m-\e[0m\e[48;5;56m$(parse_git_branch)\e[m-${PSRC}-${PSOC}-$(parse_rvm_env)\n$'
+export RC_PS1
